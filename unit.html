@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>em vs rem Parent-Child Example</title>
+  <style>
+    html {
+      font-size: 16px; /* Root size */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    /* Parent section */
+    .parent {
+      font-size: 20px; /* Parent font size */
+      border: 2px solid #333;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Child with em */
+    .child-em p {
+      font-size: 2em; /* 2 × parent (20px) = 40px */
+      color: darkblue;
+    }
+
+    /* Child with rem */
+    .child-rem p {
+      font-size: 2rem; /* 2 × root (16px) = 32px */
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>em vs rem inside Parent → Child</h2>
+
+  <section class="parent">
+    <p>Parent font-size: <strong>20px</strong></p>
+
+    <div class="child-em">
+      <p>Child using <code>2em</code> → 40px</p>
+    </div>
+
+    <div class="child-rem">
+      <p>Child using <code>2rem</code> → 32px</p>
+    </div>
+  </section>
+</body>
+</html>
